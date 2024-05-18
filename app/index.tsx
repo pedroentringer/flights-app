@@ -1,6 +1,8 @@
-import { Text, View } from "react-native";
+import { useTheme } from "@/providers/theme";
+import { Text, View, Button } from "react-native";
 
 export default function Index() {
+  const { themeName, setThemeName } = useTheme()
   return (
     <View
       style={{
@@ -9,7 +11,9 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Theme: {themeName}</Text>
+      <Button title="Light" onPress={() => setThemeName('light')} />
+      <Button title="Dark" onPress={() => setThemeName('dark')} />
     </View>
   );
 }
