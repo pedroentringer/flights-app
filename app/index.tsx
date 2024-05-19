@@ -6,7 +6,8 @@ import Logo from "@/components/logo";
 import Plane from "@/components/plane";
 import { useFlights } from "@/providers/flights";
 import { useTheme } from "@/providers/theme";
-import { Text, View, Button } from "react-native";
+import { View, Button } from "react-native";
+import { Text } from '@/components/texts/styles'
 
 export default function Index() {
   const { themeName, setThemeName } = useTheme()
@@ -31,11 +32,11 @@ export default function Index() {
       <PlaneIcon variant="tertiary" />
 
       <FadeIn>
-        <Text>Fade In Animation</Text>
+        <Text variant="tertiary" weight="bold" size="xLarge">Fade In Animation</Text>
       </FadeIn>
 
       <FadeInOut visible>
-        <Text>Fade In Out Animation</Text>
+        <Text variant="tertiary" weight="medium" size="small">Fade In Out Animation</Text>
       </FadeInOut>
       
       
