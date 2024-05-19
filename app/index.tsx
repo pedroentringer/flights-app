@@ -1,3 +1,4 @@
+import { FadeIn, FadeInOut } from "@/components/animations";
 import Plane from "@/components/plane";
 import { useFlights } from "@/providers/flights";
 import { useTheme } from "@/providers/theme";
@@ -14,6 +15,17 @@ export default function Index() {
         alignItems: "center",
       }}
     >
+
+      <FadeIn>
+        <Text>Fade In Animation</Text>
+      </FadeIn>
+
+      <FadeInOut visible>
+        <Text>Fade In Out Animation</Text>
+      </FadeInOut>
+      
+      
+
       <Plane show={true}/>
       <Text>Total Flights: {flights.length}</Text>
       <Button title="Add Flight" onPress={() => {
