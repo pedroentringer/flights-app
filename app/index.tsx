@@ -1,4 +1,5 @@
 import { FadeIn, FadeInOut } from "@/components/animations";
+import Logo from "@/components/logo";
 import Plane from "@/components/plane";
 import { useFlights } from "@/providers/flights";
 import { useTheme } from "@/providers/theme";
@@ -15,6 +16,9 @@ export default function Index() {
         alignItems: "center",
       }}
     >
+      <View style={{ width: 100, height: 100, backgroundColor: 'red'}}>
+        <Logo variant="white" />
+      </View>
 
       <FadeIn>
         <Text>Fade In Animation</Text>
