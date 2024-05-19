@@ -1,7 +1,7 @@
 import { FadeIn, FadeInOut } from "@/components/animations";
 import { PlaneButton } from "@/components/buttons";
 import PlaneIcon from "@/components/icons/plane";
-import { Container } from "@/components/layout";
+import { Align, Container } from "@/components/layout";
 import Logo from "@/components/logo";
 import Plane from "@/components/plane";
 import { useFlights } from "@/providers/flights";
@@ -13,10 +13,18 @@ export default function Index() {
   const { flights, addFlight, removeFlight } = useFlights()
   return (
     <Container full padding>
-      <View style={{ width: 100, height: 100, backgroundColor: 'red'}}>
+      <Align 
+        direction="column"
+        horizontal="center"
+        vertical="center"
+        style={{
+          width: 300, 
+          height: 300, 
+          backgroundColor: 'red',
+        }}>
         <Logo variant="white" />
-        <PlaneIcon variant="primary" />
-      </View>
+        <Logo variant="white" />
+      </Align>
 
       <PlaneButton onPress={() => console.log('plane button')}  />
 
